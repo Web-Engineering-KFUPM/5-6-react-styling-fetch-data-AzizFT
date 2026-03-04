@@ -235,8 +235,17 @@ export default function App() {
      Dependency array MUST be: [searchTerm, users]
      ========================================================= */
   useEffect(() => {
-    // TODO 2.2: Implement filtering users here (see lab instructions)
-  }, [searchTerm, users]);
+   if (!searchTerm) {
+      setFilteredUsers(users);
+      return;
+   }
+
+   const lowerSearch = searchTerm.toLowerCase();
+   const filtered = users.filter((user) =>
+      user.name.toLowerCase().includes(lowerSearch)
+   );
+   setFilteredUsers(filtered);
+   }, [searchTerm, users]);
 
   // Modal handlers (already complete)
   function handleUserClick(user) {
