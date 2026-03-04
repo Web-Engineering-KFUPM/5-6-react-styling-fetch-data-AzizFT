@@ -180,9 +180,9 @@ END OF LAB INSTRUCTIONS
 
 import { useEffect, useState } from "react";
 import { Container, Spinner, Alert } from "react-bootstrap";
-import SearchBar from "./components/SearchBar";
-import UserList from "./components/UserList";
-import UserModal from "./components/UserModal";
+import SearchBar from "./SearchBar";
+import UserList from "./UserList";
+import UserModal from "./UserModal";
 import "./index.css";
 
 export default function App() {
@@ -235,6 +235,7 @@ export default function App() {
         <Container>
           <h1 className="h2 mb-0">User Management Dashboard</h1>
           <p className="mb-0 opacity-75">Search users and view details</p>
+          <header className="bg-primary text-white py-3 mb-4 shadow"></header>
         </Container>
       </header>
 
@@ -257,6 +258,7 @@ export default function App() {
       <footer className="">
         <Container>
           <small className="text-muted">SWE 363 — React Lab</small>
+          <footer className="bg-light py-4 mt-5"></footer>
         </Container>
       </footer>
     </div>
